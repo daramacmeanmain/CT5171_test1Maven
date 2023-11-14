@@ -30,4 +30,10 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            archiveArtifacts allowEmptyArchive: true,
+            artifacts: '**/ct5171_test1Maven*.jar'
+        }
+    }
 }
